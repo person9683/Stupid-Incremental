@@ -1,2 +1,2 @@
 # Stupid-Incremental
-Stupid Incremental.
+Certainly a stupid incremental.
