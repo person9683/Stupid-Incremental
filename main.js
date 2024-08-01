@@ -49,3 +49,4 @@ if (typeof saveGame.point !== "undefined") gameData.point = saveGame.point;
 if (typeof saveGame.pointPerClick !== "undefined") gameData.pointPerClick = saveGame.pointPerClick; 
 if (typeof saveGame.pointPerClickCost !== "undefined") gameData.pointPerClickCost = saveGame.pointPerClickCost;
 if (typeof saveGame.lastTick !== "undefined") gameData.lastTick = saveGame.lastTick;
+
