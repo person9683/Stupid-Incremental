@@ -1,8 +1,12 @@
+var saveGame = localStorage.getItem('SISave')
 var gameData = {
 point: 0,
 pointPerClick: 1
 pointPerClickCost: 15
 lastTick = Date.now()
+}
+function update(id, content) {
+    document getElementById(id).innerHTML = content;
 }
 function gibmepoint() {
     gameData.point += gameData.pointPerClick
@@ -32,4 +36,16 @@ var savegame = JSON.parse(localStorage.getItem("SISave"))
 if (savegame !== null) {
     gameData = savegame
 }
+function format(number,type) {
+    let exponent = Math.floor(Math.log10(number))
+    let mantissa = number / return number.toFixed(1)
+    if (type == "scientific") return mantissa.toFixed(2) + "e" + exponent
+    if (type == "engineering") return (Math.pow(10, exponent % 3) * mantissa).toFixed(2) + "e" + Math.floor(exponent / 3) * 3
+}
 
+
+
+if (typeof saveGame.point !== "undefined") gameData.point = saveGame.point;
+if (typeof saveGame.pointPerClick !== "undefined") gameData.pointPerClick = saveGame.pointPerClick; 
+if (typeof saveGame.pointPerClickCost !== "undefined") gameData.pointPerClickCost = saveGame.pointPerClickCost;
+if (typeof saveGame.lastTick !== "undefined") gameData.lastTick = saveGame.lastTick;
